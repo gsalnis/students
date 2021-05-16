@@ -22,14 +22,14 @@ Taip pat dirbu su Docker, žinau kaip jie veikia, kaip sukurti, trinti, paleisti
 Kadangi su frontend dirbti visiškai netenka, Javascript atliktoje užduotyje naudojamas nebuvo.
 
 Dokumentacija:
-getStudentsInfo - metodas, kuriame aprašyta užklausa grąžina informaciją apie studentus ir universitetus, kuriuose studijuoja.
-getStudentMarks(int $studentId) - metodas, kuriame aprašyta užklausa grąžina pateikto studento pažymius ir studijuojamus dalykus.
-getAllSubjects - metodas, kuriame aprašyta užklausa grąžina visus dėstomus dalykus.
+- getStudentsInfo - metodas, kuriame aprašyta užklausa grąžina informaciją apie studentus ir universitetus, kuriuose studijuoja.
+- getStudentMarks(int $studentId) - metodas, kuriame aprašyta užklausa grąžina pateikto studento pažymius ir studijuojamus dalykus.
+- getAllSubjects - metodas, kuriame aprašyta užklausa grąžina visus dėstomus dalykus.
 
-getStudentsMarksAverage() - pagrindinis metodas, kuris apskaičiuoja visų studentų studijuojamų dalykų vidurkius ir pateikia duomenis į pusalpį.
-getStudentMarksAverageBySubject() - suskaičiuoja pateiktų pažymių vidurkį ir sugrupuoja pagal studijuojamą dalyką.
-multiArraySearch() - metodas, kurio pagalba galima ieškoti reikšmių dviejų sluoksnių sąrašuose(array).
-normalizeData(array $dataToNormalize, array $students) - metodas, kuriuo yra tvarkingai sudėliojami duomenys.
+- getStudentsMarksAverage() - pagrindinis metodas, kuris apskaičiuoja visų studentų studijuojamų dalykų vidurkius ir pateikia duomenis į pusalpį.
+- getStudentMarksAverageBySubject() - suskaičiuoja pateiktų pažymių vidurkį ir sugrupuoja pagal studijuojamą dalyką.
+- multiArraySearch() - metodas, kurio pagalba galima ieškoti reikšmių dviejų sluoksnių sąrašuose(array).
+- normalizeData(array $dataToNormalize, array $students) - metodas, kuriuo yra tvarkingai sudėliojami duomenys.
 
 Dėl testavimo:
 Padariau apsaugą, kad jeigu nutinka taip, kad atsiranda naujas subject, ir tam tikri studentai neturi to dalyko pažyio, būtų parašyta:
