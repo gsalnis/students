@@ -26,15 +26,17 @@ class Students extends Controller\AbstractController
 
     const MARK_AVERAGE = 'markAverage';
 
+    const STUDENT_NO_MARKS = 'Studentas neturi nė vieno pažymio šiame dalyke';
+
     /**
      * @Route("/")
-     * @Method({"GET"})
      */
 
     public function getStudentsMarksAverage()
     {
+        echo "<pre>";
         $students = $this->getStudentsInfo();
-echo "<pre>";
+
         $allStudentsAverages = [];
 
         foreach ($students as $student) {
@@ -44,9 +46,7 @@ echo "<pre>";
 
             $allStudentsAverages = array_merge($allStudentsAverages, $studentAverages);
         }
-
         $normalizedData = $this->normalizeData($allStudentsAverages, $students);
-//print_r($normalizedData);exit;
         return $this->render('students/index.html.twig', array('normalizedData' => $normalizedData));
     }
 
@@ -146,7 +146,6 @@ echo "<pre>";
     {
         $allSubjects = $this->getAllSubjects();
 
-
         $header = [];
 
         foreach ($allSubjects as $subject) {
@@ -178,10 +177,14 @@ echo "<pre>";
                     $subject[self::SUBJECT_NAME],
                     self::SUBJECT_NAME
                 );
-                $normalizedData[$student[self::STUDENT_ID]][] = $subjectAverage[0][self::MARK_AVERAGE];
+
+                if (!empty($subjectAverage)) {
+                    $normalizedData[$student[self::STUDENT_ID]][] = $subjectAverage[0][self::MARK_AVERAGE];
+                } else {
+                    $normalizedData[$student[self::STUDENT_ID]][] = self::STUDENT_NO_MARKS;
+                }
             }
         }
-
          array_unshift($normalizedData, $header);
 
          return $normalizedData;
