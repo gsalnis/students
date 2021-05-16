@@ -34,7 +34,6 @@ class Students extends Controller\AbstractController
 
     public function getStudentsMarksAverage()
     {
-        echo "<pre>";
         $students = $this->getStudentsInfo();
 
         $allStudentsAverages = [];
