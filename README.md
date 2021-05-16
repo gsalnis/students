@@ -1,7 +1,7 @@
 Instaliavimo instrukcijos:
 - įdiegti xampp
 - įkelti pateiktą marks.sql failą į duomenų bazę
-- parsisiųsti students projektą ir įkelti į xampp direktorijoje esantį htdocs aplanką
+- parsisiųsti students projektą ir įkelti į xampp direktorijoje esantį htdocs aplanką ir suteikti projekto direktorijai atitinkamas teises
 - konsolėje paleisti komandą 'composer install'
 - naršyklėje užeiti į http://localhost/students/public
 
