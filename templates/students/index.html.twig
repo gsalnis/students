@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Students{% endblock %}
+{% block body %}
+    <h1>Student average marks in subjects</h1>
+    {% if normalizedData %}
+        <table id="articles" class="table table-striped">
+            {% for data in normalizedData %}
+                <tr>
+                    <td>{{ data.univeristyName }}</td>
+                    <td>{{ data.fullName }}</td>
+                    <td>{{ data.0 }}</td>
+                    <td>{{ data.1 }}</td>
+                    <td>{{ data.2 }}</td>
+                    <td>{{ data.3 }}</td>
+                    <td>{{ data.4 }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No articles to display</p>
+    {% endif %}
+{% endblock %}
