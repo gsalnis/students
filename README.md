@@ -32,7 +32,7 @@ Dokumentacija:
 - normalizeData(array $dataToNormalize, array $students) - metodas, kuriuo yra tvarkingai sudėliojami duomenys.
 
 Dėl testavimo:
-Padariau apsaugą, kad jeigu nutinka taip, kad atsiranda naujas subject, ir tam tikri studentai neturi to dalyko pažyio, būtų parašyta:
+Padariau apsaugą, kad jeigu nutinka taip, kad atsiranda naujas subject, ir tam tikri studentai neturi to dalyko pažymio, būtų parašyta:
 'Studentas neturi nė vieno pažymio šiame dalyke'
 Tačiau, kadangi trūksta patirties su fronted dalimi, man nepavyko padaryti dinaminės lentelės, todėl kaskart pridėjus naują subject,
- reikia pridėti papildomą parametrą index.html.twig, pvz: <td>{{ data.5 }}</td>
+ reikia pridėti papildomą parametrą index.html.twig faile, pvz: <td>{{ data.5 }}</td>
